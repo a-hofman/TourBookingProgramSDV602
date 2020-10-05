@@ -18,6 +18,13 @@ namespace TourBookingProgramSDV602
         public frmAddTour()
         {
             InitializeComponent();
+            btnAddTour.DialogResult = DialogResult.OK;
+            btnCancel.DialogResult = DialogResult.Cancel;
+        }
+
+        public string getItem()
+        {
+            return cboSelectTour.SelectedItem.ToString();
         }
 
         public string TourTypeString()
@@ -28,8 +35,7 @@ namespace TourBookingProgramSDV602
 
         private void btnBookTour_Click(object sender, EventArgs e)
         {
-            
-            
+           
             label1.Text = TourTypeString();
             this.Close();
         }

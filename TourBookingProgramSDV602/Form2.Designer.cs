@@ -31,6 +31,8 @@
             this.cboSelectTour = new System.Windows.Forms.ComboBox();
             this.btnBookTour = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnAddTour = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cboSelectTour
@@ -65,11 +67,31 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
             // 
+            // btnAddTour
+            // 
+            this.btnAddTour.Location = new System.Drawing.Point(348, 158);
+            this.btnAddTour.Name = "btnAddTour";
+            this.btnAddTour.Size = new System.Drawing.Size(75, 23);
+            this.btnAddTour.TabIndex = 3;
+            this.btnAddTour.Text = "Add Tour";
+            this.btnAddTour.UseVisualStyleBackColor = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(348, 197);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 4;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
             // frmAddTour
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnAddTour);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBookTour);
             this.Controls.Add(this.cboSelectTour);
@@ -85,5 +107,7 @@
         private System.Windows.Forms.ComboBox cboSelectTour;
         private System.Windows.Forms.Button btnBookTour;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAddTour;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

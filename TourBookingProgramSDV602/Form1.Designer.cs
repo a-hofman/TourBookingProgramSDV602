@@ -93,9 +93,9 @@
         #endregion
 
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.ListBox lstTours;
         private System.Windows.Forms.Label lblTourListBox;
         private System.Windows.Forms.Button btnAddTour;
+        public System.Windows.Forms.ListBox lstTours;
     }
 }
 
