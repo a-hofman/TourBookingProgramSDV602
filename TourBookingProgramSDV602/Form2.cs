@@ -33,16 +33,5 @@ namespace TourBookingProgramSDV602
             return tourType;
        }
 
-       private void btnBookTour_Click(object sender, EventArgs e)
-       {
-           
-        //    label1.Text = TourTypeString();
-        //    this.Close();
-       }
-
-       private void cboSelectTour_SelectedIndexChanged(object sender, EventArgs e)
-       {
-
-       }
     }
 }

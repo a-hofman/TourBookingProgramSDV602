@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.cboSelectTour = new System.Windows.Forms.ComboBox();
-            this.btnBookTour = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddTour = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -46,17 +45,6 @@
             this.cboSelectTour.Name = "cboSelectTour";
             this.cboSelectTour.Size = new System.Drawing.Size(121, 21);
             this.cboSelectTour.TabIndex = 0;
-            this.cboSelectTour.SelectedIndexChanged += new System.EventHandler(this.cboSelectTour_SelectedIndexChanged);
-            // 
-            // btnBookTour
-            // 
-            this.btnBookTour.Location = new System.Drawing.Point(139, 12);
-            this.btnBookTour.Name = "btnBookTour";
-            this.btnBookTour.Size = new System.Drawing.Size(75, 23);
-            this.btnBookTour.TabIndex = 1;
-            this.btnBookTour.Text = "Book Tour";
-            this.btnBookTour.UseVisualStyleBackColor = true;
-            this.btnBookTour.Click += new System.EventHandler(this.btnBookTour_Click);
             // 
             // label1
             // 
@@ -93,7 +81,6 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddTour);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnBookTour);
             this.Controls.Add(this.cboSelectTour);
             this.Name = "frmAddTour";
             this.Text = "Add tour";
@@ -105,7 +92,6 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cboSelectTour;
-        private System.Windows.Forms.Button btnBookTour;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddTour;
         private System.Windows.Forms.Button btnCancel;
