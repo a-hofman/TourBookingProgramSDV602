@@ -25,7 +25,9 @@ namespace TourBookingProgramSDV602
         private void btnAddTour_Click(object sender, EventArgs e)
         {
             var newForm = new frmAddTour();
-            newForm.Show();
+            newForm.ShowDialog();
+
         }
+
     }
 }
