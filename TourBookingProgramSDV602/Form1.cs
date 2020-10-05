@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TourBookingProgramSDV602
 {
-    public partial class Form1 : Form
+    public partial class frmMyBookings : Form
     {
-        public Form1()
+        public frmMyBookings()
         {
             InitializeComponent();
         }
@@ -20,6 +20,12 @@ namespace TourBookingProgramSDV602
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnAddTour_Click(object sender, EventArgs e)
+        {
+            var newForm = new frmAddTour();
+            newForm.Show();
         }
     }
 }
