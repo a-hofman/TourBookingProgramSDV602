@@ -27,22 +27,22 @@ namespace TourBookingProgramSDV602
             return cboSelectTour.SelectedItem.ToString();
         }
 
-        public string TourTypeString()
-        {
+       public string TourTypeString()
+       {
             string tourType = cboSelectTour.SelectedItem.ToString();
             return tourType;
-        }
+       }
 
-        private void btnBookTour_Click(object sender, EventArgs e)
-        {
+       private void btnBookTour_Click(object sender, EventArgs e)
+       {
            
-            label1.Text = TourTypeString();
-            this.Close();
-        }
+        //    label1.Text = TourTypeString();
+        //    this.Close();
+       }
 
-        private void cboSelectTour_SelectedIndexChanged(object sender, EventArgs e)
-        {
+       private void cboSelectTour_SelectedIndexChanged(object sender, EventArgs e)
+       {
 
-        }
+       }
     }
 }
