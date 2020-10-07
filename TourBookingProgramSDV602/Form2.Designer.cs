@@ -66,6 +66,7 @@
             this.btnAddTour.TabIndex = 3;
             this.btnAddTour.Text = "Add Tour";
             this.btnAddTour.UseVisualStyleBackColor = true;
+            this.btnAddTour.Click += new System.EventHandler(this.btnAddTour_Click);
             // 
             // btnCancel
             // 

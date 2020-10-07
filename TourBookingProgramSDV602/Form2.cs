@@ -18,8 +18,22 @@ namespace TourBookingProgramSDV602
         public frmAddTour()
         {
             InitializeComponent();
-            btnAddTour.DialogResult = DialogResult.OK;
+            //btnAddTour.DialogResult = DialogResult.OK;
             btnCancel.DialogResult = DialogResult.Cancel;
+            CheckSelectionMade();
+        }
+
+        private void CheckSelectionMade()
+        {
+            if (TourTypeString() == null)
+            {
+                btnAddTour.DialogResult = DialogResult.Cancel;
+            }
+            else
+            {
+                btnAddTour.DialogResult = DialogResult.OK;
+            }
+                    
         }
 
         public string getItem()
@@ -33,5 +47,16 @@ namespace TourBookingProgramSDV602
             return tourType;
        }
 
+        private void btnAddTour_Click(object sender, EventArgs e)
+        {
+        //    if (getItem() == null)
+        //    {
+        //        MessageBox.Show("Select a tour type");
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show(getItem());
+        //    }
+        }
     }
 }
