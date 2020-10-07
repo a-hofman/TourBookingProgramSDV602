@@ -24,15 +24,23 @@ namespace TourBookingProgramSDV602
 
         private void btnAddTour_Click(object sender, EventArgs e)
         {
-
             frmAddTour frm2 = new frmAddTour();
-            if (frm2.ShowDialog(this) == DialogResult.OK)
-            {
-                lstTours.Items.Add(frm2.getItem());
-            }
-            frm2.Close();
-            frm2.Dispose();
+            frm2.ShowDialog();
+            lstTours.Items.Add(frm2.getItem());
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            ListBox.SelectedObjectCollection selectedItems = new ListBox.SelectedObjectCollection(lstTours);
+            selectedItems = lstTours.SelectedItems; 
+            
+            if (lstTours.SelectedIndex != -1)
+            {
+                for (int i = selectedItems.Count - 1; i >= 0; i--)
+                    lstTours.Items.Remove(selectedItems[i]);
+            }
+            else
+                MessageBox.Show("Select a tour");
+        }
     }
 }

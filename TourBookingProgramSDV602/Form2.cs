@@ -13,25 +13,37 @@ namespace TourBookingProgramSDV602
     public partial class frmAddTour : Form
     {
 
-        
+
 
         public frmAddTour()
         {
             InitializeComponent();
-            btnAddTour.DialogResult = DialogResult.OK;
             btnCancel.DialogResult = DialogResult.Cancel;
+            btnOK.DialogResult = DialogResult.OK;
+            btnOK.Enabled = false;
         }
 
         public string getItem()
         {
-            return cboSelectTour.SelectedItem.ToString();
+            string tourType = cboSelectTour.SelectedItem.ToString();
+            string numPeople = numericUpDown1.Value.ToString();
+            //Timespan startDate = dateTimePicker1.Value();
+
+            DateTime startDate = dateTimePicker1.Value.Date;
+            DateTime endDate = dateTimePicker2.Value.Date;
+
+            TimeSpan tourLengthTimeSpan = (endDate - startDate);
+            string tourLength = tourLengthTimeSpan.ToString();
+
+            return "Your holiday:" + tourType + " with " + numPeople + " people, for " + tourLength + "days.";
         }
 
-       public string TourTypeString()
-       {
-            string tourType = cboSelectTour.SelectedItem.ToString();
-            return tourType;
-       }
-
+        private void cboSelectTour_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboSelectTour.SelectedItem != null && !string.IsNullOrEmpty(getItem()))
+                btnOK.Enabled = true;
+            else
+                btnOK.Enabled = false;
+        }
     }
 }

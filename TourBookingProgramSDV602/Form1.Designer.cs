@@ -32,6 +32,7 @@
             this.lstTours = new System.Windows.Forms.ListBox();
             this.lblTourListBox = new System.Windows.Forms.Label();
             this.btnAddTour = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnExit
@@ -74,11 +75,22 @@
             this.btnAddTour.UseVisualStyleBackColor = true;
             this.btnAddTour.Click += new System.EventHandler(this.btnAddTour_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(93, 415);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Delete tour";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // frmMyBookings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAddTour);
             this.Controls.Add(this.lblTourListBox);
             this.Controls.Add(this.lstTours);
@@ -96,6 +108,7 @@
         private System.Windows.Forms.Label lblTourListBox;
         private System.Windows.Forms.Button btnAddTour;
         public System.Windows.Forms.ListBox lstTours;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
 
