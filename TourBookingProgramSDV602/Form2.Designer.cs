@@ -51,7 +51,7 @@
             "Safari",
             "Tropical",
             "Mountain"});
-            this.cboSelectTour.Location = new System.Drawing.Point(12, 25);
+            this.cboSelectTour.Location = new System.Drawing.Point(11, 32);
             this.cboSelectTour.Name = "cboSelectTour";
             this.cboSelectTour.Size = new System.Drawing.Size(390, 21);
             this.cboSelectTour.TabIndex = 0;
@@ -62,7 +62,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 13);
+            this.label1.Size = new System.Drawing.Size(302, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Choose a type of tour from the drop down";
             // 

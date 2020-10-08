@@ -15,6 +15,7 @@ namespace TourBookingProgramSDV602
         public frmMyBookings()
         {
             InitializeComponent();
+            this.Font = new Font("Arial", 12);
         }
 
         private void btnExit_Click(object sender, EventArgs e)

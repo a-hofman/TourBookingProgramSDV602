@@ -21,13 +21,13 @@ namespace TourBookingProgramSDV602
             btnCancel.DialogResult = DialogResult.Cancel;
             btnOK.DialogResult = DialogResult.OK;
             btnOK.Enabled = false;
+            this.Font = new Font("Arial", 12);
         }
 
         public string getItem()
         {
             string tourType = cboSelectTour.SelectedItem.ToString();
             string numPeople = numericUpDown1.Value.ToString();
-            //Timespan startDate = dateTimePicker1.Value();
 
             DateTime startDate = dateTimePicker1.Value.Date;
             DateTime endDate = dateTimePicker2.Value.Date;
@@ -40,7 +40,7 @@ namespace TourBookingProgramSDV602
 
         private void cboSelectTour_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboSelectTour.SelectedItem != null && !string.IsNullOrEmpty(getItem()))
+            if (cboSelectTour.SelectedItem != null)
                 btnOK.Enabled = true;
             else
                 btnOK.Enabled = false;
