@@ -26,7 +26,6 @@ namespace TourBookingProgramSDV602
         {
             frmAddTour frm2 = new frmAddTour();
             frm2.ShowDialog();
-            lstTours.Items.Add(frm2.getItem());
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

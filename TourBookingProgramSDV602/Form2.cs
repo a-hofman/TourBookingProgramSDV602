@@ -23,8 +23,15 @@ namespace TourBookingProgramSDV602
             btnOK.Enabled = false;
         }
 
-        public string getItem()
+
+        /*public string getItem()
         {
+            Tour newTour = new Tour();
+
+            newTour.TourType = cboSelectTour.SelectedItem.ToString();
+            newTour.NumPeople = numericUpDown1.Value;
+
+
             string tourType = cboSelectTour.SelectedItem.ToString();
             string numPeople = numericUpDown1.Value.ToString();
             //Timespan startDate = dateTimePicker1.Value();
@@ -36,14 +43,18 @@ namespace TourBookingProgramSDV602
             string tourLength = tourLengthTimeSpan.ToString();
 
             return "Your holiday:" + tourType + " with " + numPeople + " people, for " + tourLength + "days.";
-        }
+        }*/
 
         private void cboSelectTour_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboSelectTour.SelectedItem != null && !string.IsNullOrEmpty(getItem()))
+            if (cboSelectTour.SelectedItem != null)
                 btnOK.Enabled = true;
             else
                 btnOK.Enabled = false;
         }
+
+        /*private void btnOK_Click(object sender, EventArgs e)
+        {
+        }*/
     }
 }
