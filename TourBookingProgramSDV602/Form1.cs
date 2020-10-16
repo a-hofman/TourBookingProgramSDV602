@@ -43,5 +43,12 @@ namespace TourBookingProgramSDV602
             else
                 MessageBox.Show("Select a tour");
         }
+
+        private void frmMyBookings_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dataSet_Tours.Tours' table. You can move, or remove it, as needed.
+            this.toursTableAdapter.Fill(this.dataSet_Tours.Tours);
+
+        }
     }
 }

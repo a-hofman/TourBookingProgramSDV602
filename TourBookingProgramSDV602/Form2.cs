@@ -45,5 +45,20 @@ namespace TourBookingProgramSDV602
             else
                 btnOK.Enabled = false;
         }
+
+        private void toursBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.toursBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataSet_Tours);
+
+        }
+
+        private void frmAddTour_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dataSet_Tours.Tours' table. You can move, or remove it, as needed.
+            this.toursTableAdapter.Fill(this.dataSet_Tours.Tours);
+
+        }
     }
 }
