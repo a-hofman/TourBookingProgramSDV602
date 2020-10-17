@@ -9,26 +9,26 @@ namespace TourBookingProgramSDV602
 {
     public class Tour
     {
-        public string tourType;
-        public decimal numPeople;
+        public string tourType { get; set; }
+        public decimal numPeople { get; set; }
 
-        public Tour(string tourType, decimal numPeople)
-        {
-            this.tourType = tourType;
-            this.numPeople = numPeople;
-        }
+        //public tour(string tourtype, decimal numpeople)
+        //{
+        //    this.tourtype = tourtype;
+        //    this.numpeople = numpeople;
+        //}
 
-        public string TourType
-        {
-            get { return tourType; }
-            set { tourType = value; }
-        }
+        //public string TourType
+        //{
+        //    get { return tourType; }
+        //    set { tourType = value; }
+        //}
 
-        public decimal NumPeople
-        {
-            get { return numPeople; }
-            set { numPeople = value; }
-        }
+        //public decimal NumPeople
+        //{
+        //    get { return numPeople; }
+        //    set { numPeople = value; }
+        //}
 
         /*public Tour()
         {

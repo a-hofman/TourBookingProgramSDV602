@@ -17,7 +17,6 @@ namespace TourBookingProgramSDV602
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMyBookings());
-            
         }
     }
 }

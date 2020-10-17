@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnExit = new System.Windows.Forms.Button();
             this.lstTours = new System.Windows.Forms.ListBox();
+            this.frmMyBookingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblTourListBox = new System.Windows.Forms.Label();
             this.btnAddTour = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.frmMyBookingsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -55,6 +58,11 @@
             this.lstTours.Name = "lstTours";
             this.lstTours.Size = new System.Drawing.Size(776, 251);
             this.lstTours.TabIndex = 1;
+            this.lstTours.SelectedIndexChanged += new System.EventHandler(this.lstTours_SelectedIndexChanged);
+            // 
+            // frmMyBookingsBindingSource
+            // 
+            this.frmMyBookingsBindingSource.DataSource = typeof(TourBookingProgramSDV602.frmMyBookings);
             // 
             // lblTourListBox
             // 
@@ -97,6 +105,7 @@
             this.Controls.Add(this.btnExit);
             this.Name = "frmMyBookings";
             this.Text = "My Bookings";
+            ((System.ComponentModel.ISupportInitialize)(this.frmMyBookingsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,6 +118,7 @@
         private System.Windows.Forms.Button btnAddTour;
         public System.Windows.Forms.ListBox lstTours;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.BindingSource frmMyBookingsBindingSource;
     }
 }
 

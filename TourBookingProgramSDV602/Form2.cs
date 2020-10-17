@@ -12,9 +12,6 @@ namespace TourBookingProgramSDV602
 {
     public partial class frmAddTour : Form
     {
-
-
-
         public frmAddTour()
         {
             InitializeComponent();
@@ -23,27 +20,17 @@ namespace TourBookingProgramSDV602
             btnOK.Enabled = false;
         }
 
-
-        /*public string getItem()
+        public string getTourName()
         {
-            Tour newTour = new Tour();
+            return cboSelectTour.SelectedItem.ToString();
+        }
 
-            newTour.TourType = cboSelectTour.SelectedItem.ToString();
-            newTour.NumPeople = numericUpDown1.Value;
+        public decimal getNumPeople()
+        {
+            return numericUpDown1.Value;
+        }
 
 
-            string tourType = cboSelectTour.SelectedItem.ToString();
-            string numPeople = numericUpDown1.Value.ToString();
-            //Timespan startDate = dateTimePicker1.Value();
-
-            DateTime startDate = dateTimePicker1.Value.Date;
-            DateTime endDate = dateTimePicker2.Value.Date;
-
-            TimeSpan tourLengthTimeSpan = (endDate - startDate);
-            string tourLength = tourLengthTimeSpan.ToString();
-
-            return "Your holiday:" + tourType + " with " + numPeople + " people, for " + tourLength + "days.";
-        }*/
 
         private void cboSelectTour_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -53,8 +40,11 @@ namespace TourBookingProgramSDV602
                 btnOK.Enabled = false;
         }
 
-        /*private void btnOK_Click(object sender, EventArgs e)
+        private void btnOK_Click(object sender, EventArgs e)
         {
-        }*/
+            Tour newTour = new Tour {tourType="holiday", numPeople=7 };
+            frmMyBookings.TourList.Add(newTour);
+
+        }
     }
 }

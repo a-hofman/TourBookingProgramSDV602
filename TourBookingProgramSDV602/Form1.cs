@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,9 +13,13 @@ namespace TourBookingProgramSDV602
 {
     public partial class frmMyBookings : Form
     {
+        public static List<Tour> TourList = new List<Tour>();
+        public List<Tour> TourList2 = new List<Tour>();
+
         public frmMyBookings()
         {
             InitializeComponent();
+            lstTours.DataSource = TourList2;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -24,8 +29,11 @@ namespace TourBookingProgramSDV602
 
         private void btnAddTour_Click(object sender, EventArgs e)
         {
-            frmAddTour frm2 = new frmAddTour();
-            frm2.ShowDialog();
+            frmAddTour frmAddTour = new frmAddTour();
+            frmAddTour.ShowDialog();
+
+            //Tour newTour = new Tour("holiday", 7);
+            //TourList.Add(newTour);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -40,6 +48,11 @@ namespace TourBookingProgramSDV602
             }
             else
                 MessageBox.Show("Select a tour");
+        }
+
+        private void lstTours_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
